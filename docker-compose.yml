@@ -17,7 +17,7 @@ services:
     container_name: backend
     depends_on:
       - mysqldb
-    image: 127.0.0.1:8082/backend-image
+    image: 127.0.0.1:8086/backend-image
     restart: on-failure
     env_file: .env
     ports:
@@ -38,7 +38,7 @@ services:
     container_name: frontend
     depends_on:
       - backend
-    image: 127.0.0.1:8082/frontend-image
+    image: 127.0.0.1:8086/frontend-image
     restart: on-failure
     ports:
       - 4200:4200
